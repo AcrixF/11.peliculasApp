@@ -1,3 +1,18 @@
-<p>
-  home works!
-</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Movie App</h1>
+    <p class="lead">A movie for all</p>
+  </div>
+</div>
+
+<div class="container">
+  <br>
+
+  <!--En esta linea se mandan los datos entre componentes html por lo que el componente receptor debe esperar los datos con un @Input-->
+  <app-galeria [peliculas]=" cartelera|slice:0:6 " titulo = "Cartelera"></app-galeria>
+
+  <app-galeria [peliculas]=" populares|slice:0:6 " titulo = "Las mas populares"></app-galeria>
+
+  <app-galeria [peliculas]=" popularesKids|slice:0:6 " titulo = "Para niños"></app-galeria>
+
+</div>
